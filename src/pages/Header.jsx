@@ -46,8 +46,7 @@ const Header = () => {
         },
         {
           title: "Margin Calculator",
-          icon: <i className="pi pi-calculator "></i>,
-          d,
+          icon: <i className="pi pi-calculator "></i>,         
         },
         {
           title: "Profit Calculator",
