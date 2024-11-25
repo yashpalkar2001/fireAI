@@ -59,13 +59,17 @@ const Header = () => {
   return (
     <>
       <header>
-        <div className="flex items-center justify-between w-full px-2">
+      <div
+          className={`flex items-center justify-between w-full px-2 ${
+            selectedState ? "!bg-black !text-white" : ""
+          }`}
+        >
           <h2 className="text-lg font-semibold">Trading</h2>
-          <i className="pi pi-angle-right p-1 rounded-full shadow-md"></i>,
+          <i className="pi pi-angle-right p-1 rounded-full shadow-md"></i>
         </div>
         <ul
           className={`w-fit h-full bg-white relative px-2 overflow-y-autor ${
-            selectedState ? "bg-black text-white" : ""
+            selectedState ? "!bg-black !text-white" : ""
           }`}
         >
           {headerMenu.map((item, index) => (
@@ -95,12 +99,12 @@ const Header = () => {
           ))}
           <div
             className={`text-xs font-medium bg-[#f8f8f8] p-4 rounded-md mt-4 ${
-              selectedState ? "bg-black text-white border border-white" : ""
+              selectedState ? "!bg-black !text-white !border !border-white" : ""
             }`}
           >
             <div
               className={`flex items-center justify-between p-2 rounded-md bg-white ${
-                selectedState ? "bg-black text-white border border-white" : ""
+               selectedState ? "!bg-black !text-white !border !border-white" : ""
               }`}
             >
               <h4 className=" text-gray-400">Account:</h4>
@@ -110,7 +114,7 @@ const Header = () => {
             </div>
             <div
               className={`flex items-center justify-between p-2 my-2 rounded-md bg-white ${
-                selectedState ? "bg-black text-white border border-white" : ""
+              selectedState ? "!bg-black !text-white !border !border-white" : ""
               }`}
             >
               <h4 className=" text-gray-400">Status</h4>
@@ -118,7 +122,7 @@ const Header = () => {
             </div>
             <div
               className={`flex items-center justify-between p-2 rounded-md bg-white ${
-                selectedState ? "bg-black text-white border border-white" : ""
+              selectedState ? "!bg-black !text-white !border !border-white" : ""
               }`}
             >
               <h4 className=" text-gray-400">Program</h4>
@@ -127,7 +131,7 @@ const Header = () => {
           </div>
           <div
             className={`flex justify-between items-center absolute bottom-0 left-0 bg-white w-full ${
-              selectedState ? "bg-black text-white border border-white" : ""
+  selectedState ? "!bg-black !text-white !border !border-white" : ""
             }`}
           >
             <div className="flex items-center py-3 border-b border-slate-200">
