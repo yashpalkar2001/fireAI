@@ -19,11 +19,13 @@ const Orders = () => {
   return (
     <>
       <MainLayout>
-        <div className={`w-full ${selectedState ? "bg-black text-white" : ""}`}>
+        <div
+          className={`w-full ${selectedState ? "!bg-black !text-white" : ""}`}
+        >
           {/* header  */}
           <div
-            className={`flex justify-between items-center bg-white p-3  ${
-              selectedState ? "bg-black text-white" : ""
+            className={`flex justify-between items-center bg-white p-3 ${
+              selectedState ? "!bg-black !text-white" : ""
             }`}
           >
             <h1 className="text-xl font-bold w-full ">Welcome back, Alex</h1>
@@ -46,12 +48,12 @@ const Orders = () => {
               {/* </div> */}
             </div>
           </div>
-          <div className="px-5">
+          <div className="px-5 ">
             {/* chart box  */}
             <div className={`"mt-4 flex w-full `}>
               <div
                 className={`w-[40%] bg-white p-3 rounded-md ${
-                  selectedState ? "bg-black text-white" : ""
+                  selectedState ? "!bg-black !text-white !border " : ""
                 }`}
               >
                 <h1>Total Balncing</h1>
@@ -64,9 +66,7 @@ const Orders = () => {
                     iconName="pi-sort-amount-up"
                     iconClass="bg-blue-400"
                     chartbBoxClass={`${
-                      selectedState
-                        ? "bg-black text-white border border-white"
-                        : ""
+                      selectedState ? "!bg-black !text-white !border " : ""
                     }`}
                   />
                   <ChartbBoxCard
@@ -74,17 +74,13 @@ const Orders = () => {
                     iconName={"pi-sort-amount-down"}
                     iconClass="bg-orange-400"
                     chartbBoxClass={`${
-                      selectedState
-                        ? "bg-black text-white border border-white"
-                        : ""
+                      selectedState ? "!bg-black !text-white !border " : ""
                     }`}
                   />
                 </div>
                 <div
                   className={`bg-white p-3 mt-4 rounded-md ${
-                    selectedState
-                      ? "bg-black text-white border border-white"
-                      : ""
+                    selectedState ? "!bg-black !text-white !border " : ""
                   }`}
                 >
                   <div className="flex justify-between font-medium text-sm">
@@ -142,9 +138,7 @@ const Orders = () => {
                   percentage={"^ 7%"}
                   percentageClass={"text-purple-500 bg-purple-50"}
                   boxClass={`${
-                    selectedState
-                      ? "bg-black text-white border border-white"
-                      : ""
+                    selectedState ? "!bg-black !text-white !border " : ""
                   }`}
                 />
                 <CustomBoxes
@@ -155,9 +149,7 @@ const Orders = () => {
                   percentage={"^ 0%"}
                   percentageClass={"text-red-500 bg-red-50"}
                   boxClass={`${
-                    selectedState
-                      ? "bg-black text-white border border-white"
-                      : ""
+                    selectedState ? "!bg-black !text-white !border " : ""
                   }`}
                 />
                 <CustomBoxes
@@ -166,9 +158,7 @@ const Orders = () => {
                   name={"Profit Factor"}
                   amount={"6.2"}
                   boxClass={`${
-                    selectedState
-                      ? "bg-black text-white border border-white"
-                      : ""
+                    selectedState ? "!bg-black !text-white !border " : ""
                   }`}
                 />
                 <CustomBoxes
@@ -177,9 +167,7 @@ const Orders = () => {
                   name={"Best Trade"}
                   amount={"$8,647.99"}
                   boxClass={`${
-                    selectedState
-                      ? "bg-black text-white border border-white"
-                      : ""
+                    selectedState ? "!bg-black !text-white !border " : ""
                   }`}
                 />
                 <CustomBoxes
@@ -188,9 +176,7 @@ const Orders = () => {
                   name={"Avarage Win"}
                   amount={"$647.00"}
                   boxClass={`${
-                    selectedState
-                      ? "bg-black text-white border border-white"
-                      : ""
+                    selectedState ? "!bg-black !text-white !border " : ""
                   }`}
                 />
                 <CustomBoxes
@@ -199,15 +185,13 @@ const Orders = () => {
                   name={"Win Ratio"}
                   amount={"-$4,647.00"}
                   boxClass={`${
-                    selectedState
-                      ? "bg-black text-white border border-white"
-                      : ""
+                    selectedState ? "!bg-black !text-white !border " : ""
                   }`}
                 />
               </div>
               <div
                 className={`bg-white p-2 rounded-md w-full ${
-                  selectedState ? "bg-black text-white" : ""
+                  selectedState ? "!bg-black !text-white !border " : ""
                 }`}
               >
                 <div className="flex justify-between items-center rounded-md p-2">
@@ -228,7 +212,7 @@ const Orders = () => {
                   <thead>
                     <tr
                       className={`w-full text-slate-400 bg-[#f7f7f7] p-1 ${
-                        selectedState ? "bg-black text-white" : ""
+                        selectedState ? "!bg-black !text-white !border " : ""
                       }`}
                     >
                       <th className="p-1">Time</th>
@@ -254,7 +238,7 @@ const Orders = () => {
             {/* last box of order history  */}
             <div
               className={`text-sm bg-white rounded-md p-2 ${
-                selectedState ? "bg-black text-white" : ""
+                selectedState ? "!bg-black !text-white !border " : ""
               }`}
             >
               <div className=" flex items-center justify-between p-2">
@@ -276,7 +260,7 @@ const Orders = () => {
                 <thead>
                   <tr
                     className={`w-full bg-[#f7f7f7] rounded-full p-2 ${
-                      selectedState ? "bg-black text-white" : ""
+                      selectedState ? "!bg-black !text-white !border " : ""
                     }`}
                   >
                     <th className="p-2">Symbol</th>
